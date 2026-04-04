@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Care | Cosmetics store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">GLOW & CARE</div>
+            </div>
+        <div class="deve"><a href="base_page/index1.html">Sets</a></div>
+        <div class="deve"><a href=""></a></div>
+        <div class="deve"><a href="">Кіра</a></div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Твоя природна краса — наш пріоритет</h1>
+            <p>Нова колекція органічної косметики вже у продажу</p>
+        </section>
+
+        <section class="products" id="product-grid">
+            </section>
+    </main>
+
+    <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Ваш кошик</h2>
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <p>Разом: <span id="cart-total">0</span> грн</p>
+            <button class="checkout-btn">Оформити замовлення</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
