@@ -12,9 +12,10 @@ let cart = [];
 // Рендер товарів
 function renderProducts() {
     const grid = document.getElementById('product-grid');
+
     grid.innerHTML = products.map(p => `
         <div class="product-card">
-            <img src="${p.img}" alt="${p.name}">
+            <img src="${p.img}" alt="${p.name}" class="product-img">
             <h3>${p.name}</h3>
             <p>${p.price} грн</p>
             <button class="btn-add" onclick="addToCart(${p.id})">Додати в кошик</button>
