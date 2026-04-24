@@ -4,7 +4,7 @@ const products = [
     { id: 3, name: "Олія для обличчя", price: 380, img: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=500" },
     { id: 4, name: "Очищувальна пінка", price: 320, img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500" },
     { id: 5, name: "Тонік з ніацинамідом", price: 480, img: "https://images.unsplash.com/photo-1617897903246-719242758050?w=500" },
-    { id: 6, name: "Сонцезахисний флюїд", price: 550, img: "https://images.unsplash.com/photo-1598440467723-5935f444de4e?w=500" },
+    { id: 6, name: "Сонцезахисний флюїд", price: 550, img: "https://rixus.com.ua/photos/elem/f/00-00025942_2.jpeg" }
 ];
 
 let cart = [];
