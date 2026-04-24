@@ -4,18 +4,18 @@ const products = [
     { id: 3, name: "Олія для обличчя", price: 380, img: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=500" },
     { id: 4, name: "Очищувальна пінка", price: 320, img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500" },
     { id: 5, name: "Тонік з ніацинамідом", price: 480, img: "https://images.unsplash.com/photo-1617897903246-719242758050?w=500" },
-    { id: 6, name: "Сонцезахисний флюїд", price: 550, img: "https://rixus.com.ua/photos/elem/f/00-00025942_2.jpeg" }
+    { id: 6, name: "Сонцезахисний флюїд", price: 550, img: "https://static.ksisters.com/public/skus/l/a8b2f1083b87003bab8a1d9d6bc9d7a0_9b6x07do_dbe8d6ebdfcee2.webp?w=500" },
 ];
 
 let cart = [];
 
-// Рендер товарів
 function renderProducts() {
     const grid = document.getElementById('product-grid');
+    if(!grid) return;
 
     grid.innerHTML = products.map(p => `
         <div class="product-card">
-            <img src="${p.img}" alt="${p.name}" class="product-img">
+            <img src="${p.img}" alt="${p.name}">
             <h3>${p.name}</h3>
             <p>${p.price} грн</p>
             <button class="btn-add" onclick="addToCart(${p.id})">Додати в кошик</button>
@@ -23,7 +23,6 @@ function renderProducts() {
     `).join('');
 }
 
-// Керування кошиком
 function toggleCart() {
     document.getElementById('cart-sidebar').classList.toggle('active');
 }
@@ -41,14 +40,20 @@ function updateCartUI() {
 
     cartCount.innerText = cart.length;
     
-    cartItems.innerHTML = cart.map((item, index) => `
+    cartItems.innerHTML = cart.map((item) => `
         <div class="cart-item">
-            <span>${item.name}</span> - <strong>${item.price} грн</strong>
+            <span>${item.name}</span>
+            <strong>${item.price} грн</strong>
         </div>
     `).join('');
 
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     cartTotal.innerText = total;
+}
+
+// Функція для кнопки Оплатити
+function showPaymentError() {
+    alert("Вибачте, онлайн-оплата тимчасово недоступна. Будь ласка, зв'яжіться з менеджером");
 }
 
 renderProducts();

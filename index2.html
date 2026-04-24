@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow & Care | Cosmetics store</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Glow & Care | Набори</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
@@ -12,8 +12,8 @@
         <nav class="navbar">
             <div class="logo">GLOW & CARE</div>
             <div class="nav-menu">
-                <div class="deve"><a href="/page1/index1.html">About us</a></div>
-                <div class="deve"><a href="/page2/index2.html">Sets</a></div>
+                <div class="deve"><a href="index.html">Магазин</a></div>
+                <div class="deve"><a href="about.html">Про нас</a></div>
                 <div class="cart-icon" onclick="toggleCart()">
                     🛒 <span id="cart-count">0</span>
                 </div>
@@ -22,12 +22,13 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Твоя природна краса — наш пріоритет</h1>
-            <p>Нова колекція органічної косметики вже у продажу</p>
+        <section class="hero sets-hero">
+            <span class="subtitle" style="color: #fff; text-transform: uppercase; letter-spacing: 2px;">Limited Edition</span>
+            <h1>Наші Фірмові Набори</h1>
+            <p>Готові рішення для комплексного догляду за вашою шкірою</p>
         </section>
 
-        <section class="products" id="product-grid">
+        <section class="products" id="sets-grid">
             </section>
     </main>
 
@@ -36,10 +37,7 @@
             <h2>Ваш кошик</h2>
             <span class="close-btn" onclick="toggleCart()">&times;</span>
         </div>
-        
-        <div id="cart-items">
-            </div>
-
+        <div id="cart-items"></div>
         <div class="cart-footer">
             <div class="total-row">
                 <p>Разом: <span id="cart-total">0</span> грн</p>
@@ -49,6 +47,10 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script>
+        // Рендеримо тільки набори для цієї сторінки
+        renderSets();
+    </script>
 </body>
 </html>

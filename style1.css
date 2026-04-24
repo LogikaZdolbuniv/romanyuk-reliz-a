@@ -1,0 +1,135 @@
+:root {
+    --primary: #fdfaf7;
+    --accent: #d4a373;
+    --dark: #3a3a3a;
+    --transition: all 0.4s ease;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    color: var(--dark);
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: white;
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: var(--transition);
+}
+
+
+.values-section {
+    padding: 80px 10%;
+    background: var(--primary);
+}
+
+.values-list {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.values-list li {
+    flex: 1;
+    min-width: 250px;
+    max-width: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle-decorator {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    margin-bottom: 25px;
+    opacity: 0.6;
+    transition: 0.4s ease;
+}
+
+.values-list li:hover .circle-decorator {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 600px;
+}
+
+
+.about-image {
+    background: url('https://images.unsplash.com/photo-1556229167-da31d4548633?auto=format&fit=crop&w=800&q=80') center/cover;
+}
+
+.about-text {
+    padding: 10% 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; height: auto; }
+    .about-image { height: 300px; }
+    .hero-section { height: 70vh; }
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: white;
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+}
